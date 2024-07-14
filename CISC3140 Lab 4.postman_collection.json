@@ -1,0 +1,990 @@
+{
+	"info": {
+		"_postman_id": "e9da4d87-86af-4790-aab3-8e927eaae938",
+		"name": "CISC3140 Lab 4",
+		"description": "CIS3140 Lab 4 is a `<Node/Express API>` that uses SQL and JavaScript to enable users to view and update data about cars. The API can be viewed here: [cisc3140lab4.herokuapp.com](cisc3140lab4.herokuapp.com).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "cisc3140lab4.herokuapp.com/api/cars",
+					"host": [
+						"cisc3140lab4",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"cars"
+					]
+				},
+				"description": "API endpoint to get *All Cars* in the system database.\n> A successful request will result in a *HTTP 200* Status code."
+			},
+			"response": [
+				{
+					"name": "All Cars",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cisc3140lab4.herokuapp.com/api/cars",
+							"host": [
+								"cisc3140lab4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Dns-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-Ct",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30941"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"78dd-MpoLZvWDiJEXittf1DD0fb6m0ZQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 May 2022 20:26:58 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"car_id\": 48,\n            \"email\": \"honoland13@japanpost.jp\",\n            \"name\": \"Hernando\",\n            \"year\": 2015,\n            \"make\": \"Acura\",\n            \"model\": \"TLX\",\n            \"score\": 62\n        },\n        {\n            \"car_id\": 167,\n            \"email\": \"nnowick3d@tuttocitta.it\",\n            \"name\": \"Nickolas\",\n            \"year\": 2016,\n            \"make\": \"Ford\",\n            \"model\": \"Mystang\",\n            \"score\": 20\n        },\n        {\n            \"car_id\": 159,\n            \"email\": \"mdearl39@amazon.co.uk\",\n            \"name\": \"Martin\",\n            \"year\": 2013,\n            \"make\": \"Hyundai\",\n            \"model\": \"Gen coupe\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 178,\n            \"email\": \"abowton3k@spiegel.de\",\n            \"name\": \"Ambros\",\n            \"year\": 2009,\n            \"make\": \"Honda\",\n            \"model\": \"Oddesy\",\n            \"score\": 72\n        },\n        {\n            \"car_id\": 30,\n            \"email\": \"qesterbrookn@bandcamp.com\",\n            \"name\": \"Quincy\",\n            \"year\": 2012,\n            \"make\": \"Hyundai\",\n            \"model\": \"Celoster\",\n            \"score\": 66\n        },\n        {\n            \"car_id\": 20,\n            \"email\": \"alynamg@blogtalkradio.com\",\n            \"name\": \"Aldridge\",\n            \"year\": 2009,\n            \"make\": \"Infiniti\",\n            \"model\": \"G37\",\n            \"score\": 38\n        },\n        {\n            \"car_id\": 207,\n            \"email\": \"hchilley40@fema.gov\",\n            \"name\": \"Hieronymus\",\n            \"year\": 1993,\n            \"make\": \"Honda\",\n            \"model\": \"Civic eG\",\n            \"score\": 40\n        },\n        {\n            \"car_id\": 51,\n            \"email\": \"tdillestone15@mysql.com\",\n            \"name\": \"Temple\",\n            \"year\": 2015,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 50\n        },\n        {\n            \"car_id\": 177,\n            \"email\": \"rthorne3j@buzzfeed.com\",\n            \"name\": \"Rupert\",\n            \"year\": 2005,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Jetta gli\",\n            \"score\": 12\n        },\n        {\n            \"car_id\": 183,\n            \"email\": \"zoller3p@paypal.com\",\n            \"name\": \"Zachery\",\n            \"year\": 2005,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Jetta\",\n            \"score\": 16\n        },\n        {\n            \"car_id\": 218,\n            \"email\": \"hsolomon44@opensource.org\",\n            \"name\": \"Horst\",\n            \"year\": 2010,\n            \"make\": \"Chevy\",\n            \"model\": \"Camaro\",\n            \"score\": 64\n        },\n        {\n            \"car_id\": 5,\n            \"email\": \"ssheather2@fc2.com\",\n            \"name\": \"Sayers\",\n            \"year\": 2003,\n            \"make\": \"Acura\",\n            \"model\": \"Rsx\",\n            \"score\": 50\n        },\n        {\n            \"car_id\": 68,\n            \"email\": \"shallagan1h@yandex.ru\",\n            \"name\": \"Scot\",\n            \"year\": 2013,\n            \"make\": \"Nissan\",\n            \"model\": \"Altima\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 10,\n            \"email\": \"hkeele7@spiegel.de\",\n            \"name\": \"Harcourt\",\n            \"year\": 2001,\n            \"make\": \"Nissan\",\n            \"model\": \"S15\",\n            \"score\": 34\n        },\n        {\n            \"car_id\": 39,\n            \"email\": \"mjehanw@so-net.ne.jp\",\n            \"name\": \"Muffin\",\n            \"year\": 2011,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 72\n        },\n        {\n            \"car_id\": 170,\n            \"email\": \"obenstead3e@psu.edu\",\n            \"name\": \"Osborn\",\n            \"year\": 2014,\n            \"make\": \"Chevy\",\n            \"model\": \"Cruze\",\n            \"score\": 50\n        },\n        {\n            \"car_id\": 43,\n            \"email\": \"ghickinbottomz@usda.gov\",\n            \"name\": \"Georgi\",\n            \"year\": 2011,\n            \"make\": \"Toyota\",\n            \"model\": \"4 Runner\",\n            \"score\": 54\n        },\n        {\n            \"car_id\": 216,\n            \"email\": \"aamor43@miibeian.gov.cn\",\n            \"name\": \"Asher\",\n            \"year\": 2007,\n            \"make\": \"Chrystler\",\n            \"model\": \"300\",\n            \"score\": 96\n        },\n        {\n            \"car_id\": 1,\n            \"email\": \"ppillman2w@surveymonkey.com\",\n            \"name\": \"Palmer\",\n            \"year\": 2012,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 89,\n            \"email\": \"ntruggian1x@bandcamp.com\",\n            \"name\": \"Nealon\",\n            \"year\": 2014,\n            \"make\": \"Honda\",\n            \"model\": \"Civic si\",\n            \"score\": 16\n        },\n        {\n            \"car_id\": 95,\n            \"email\": \"nbatstone22@yellowbook.com\",\n            \"name\": \"Norry\",\n            \"year\": 2004,\n            \"make\": \"Infiniti\",\n            \"model\": \"G35\",\n            \"score\": 12\n        },\n        {\n            \"car_id\": 67,\n            \"email\": \"wgloucester1g@phpbb.com\",\n            \"name\": \"Wilbur\",\n            \"year\": 2015,\n            \"make\": \"Subaru\",\n            \"model\": \"Sti\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 228,\n            \"email\": \"bbach4a@hugedomains.com\",\n            \"name\": \"Baillie\",\n            \"year\": 2010,\n            \"make\": \"Nissan\",\n            \"model\": \"370\",\n            \"score\": 92\n        },\n        {\n            \"car_id\": 7,\n            \"email\": \"aleadstone4@smugmug.com\",\n            \"name\": \"Alix\",\n            \"year\": 2014,\n            \"make\": \"Nissan\",\n            \"model\": \"Sentra\",\n            \"score\": 30\n        },\n        {\n            \"car_id\": 14,\n            \"email\": \"hscandricka@timesonline.co.uk\",\n            \"name\": \"Hugibert\",\n            \"year\": 1990,\n            \"make\": \"Nissan\",\n            \"model\": \"Skyline\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 8,\n            \"email\": \"sdeesly5@storify.com\",\n            \"name\": \"Sigfried\",\n            \"year\": 1991,\n            \"make\": \"Nissan\",\n            \"model\": \"Skyline\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 145,\n            \"email\": \"radriano33@imageshack.us\",\n            \"name\": \"Reade\",\n            \"year\": 1990,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 38\n        },\n        {\n            \"car_id\": 102,\n            \"email\": \"cbulward28@google.co.jp\",\n            \"name\": \"Correy\",\n            \"year\": 2015,\n            \"make\": \"Honda\",\n            \"model\": \"Accord\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 36,\n            \"email\": \"ogaraghans@huffingtonpost.com\",\n            \"name\": \"Ozzy\",\n            \"year\": 2016,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 74\n        },\n        {\n            \"car_id\": 189,\n            \"email\": \"dmawman3v@pagesperso-orange.fr\",\n            \"name\": \"Derry\",\n            \"year\": 2012,\n            \"make\": \"Toyota\",\n            \"model\": \"Fj cruiser\",\n            \"score\": 50\n        },\n        {\n            \"car_id\": 111,\n            \"email\": \"mbandiera2e@salon.com\",\n            \"name\": \"Marlon\",\n            \"year\": 2007,\n            \"make\": \"Bmw\",\n            \"model\": \"328i\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 140,\n            \"email\": \"rweathers2z@linkedin.com\",\n            \"name\": \"Roger\",\n            \"year\": 1995,\n            \"make\": \"Mitsu\",\n            \"model\": \"Evo8\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 161,\n            \"email\": \"spoon3a@gizmodo.com\",\n            \"name\": \"Sheffy\",\n            \"year\": 2012,\n            \"make\": \"Nissan\",\n            \"model\": \"370z\",\n            \"score\": 84\n        },\n        {\n            \"car_id\": 37,\n            \"email\": \"ftinmant@sina.com.cn\",\n            \"name\": \"Feodor\",\n            \"year\": 2015,\n            \"make\": \"Subaru\",\n            \"model\": \"Sti\",\n            \"score\": 54\n        },\n        {\n            \"car_id\": 184,\n            \"email\": \"erugiero3q@webs.com\",\n            \"name\": \"Ernie\",\n            \"year\": 2010,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Cc\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 243,\n            \"email\": \"sdennidge4i@gnu.org\",\n            \"name\": \"Sollie\",\n            \"year\": 2008,\n            \"make\": \"Toyota\",\n            \"model\": \"Matrix\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 66,\n            \"email\": \"tbounde1f@trellian.com\",\n            \"name\": \"Teador\",\n            \"year\": 2010,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 4\n        },\n        {\n            \"car_id\": 101,\n            \"email\": \"tmogenot27@liveinternet.ru\",\n            \"name\": \"Theodore\",\n            \"year\": 2014,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 0\n        },\n        {\n            \"car_id\": 21,\n            \"email\": \"ariccellih@addthis.com\",\n            \"name\": \"Alvis\",\n            \"year\": 2009,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 62\n        },\n        {\n            \"car_id\": 200,\n            \"email\": \"rquerree3z@seesaa.net\",\n            \"name\": \"Rand\",\n            \"year\": 2016,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 36\n        },\n        {\n            \"car_id\": 2,\n            \"email\": \"jmewis1@vistaprint.com\",\n            \"name\": \"Jordon\",\n            \"year\": 2016,\n            \"make\": \"Bmw\",\n            \"model\": \"M2\",\n            \"score\": 24\n        },\n        {\n            \"car_id\": 42,\n            \"email\": \"rgillmory@epa.gov\",\n            \"name\": \"Rowney\",\n            \"year\": 2001,\n            \"make\": \"Dodge\",\n            \"model\": \"Viper\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 59,\n            \"email\": \"rbechley1a@spiegel.de\",\n            \"name\": \"Rolf\",\n            \"year\": 2012,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Golf\",\n            \"score\": 28\n        },\n        {\n            \"car_id\": 181,\n            \"email\": \"ahapps3n@delicious.com\",\n            \"name\": \"Arri\",\n            \"year\": 2003,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 30\n        },\n        {\n            \"car_id\": 0,\n            \"email\": \"jgrene0@tinypic.com\",\n            \"name\": \"Jordan\",\n            \"year\": 2015,\n            \"make\": \"Chevy\",\n            \"model\": \"Camaro\",\n            \"score\": 0\n        },\n        {\n            \"car_id\": 23,\n            \"email\": \"tsewallj@joomla.org\",\n            \"name\": \"Tremayne\",\n            \"year\": 1998,\n            \"make\": \"Subaru\",\n            \"model\": \"Legacy\",\n            \"score\": 62\n        },\n        {\n            \"car_id\": 25,\n            \"email\": \"yheinerl@altervista.org\",\n            \"name\": \"Yvor\",\n            \"year\": 2012,\n            \"make\": \"Mercedes\",\n            \"model\": \"C250\",\n            \"score\": 78\n        },\n        {\n            \"car_id\": 83,\n            \"email\": \"pjacke1s@theguardian.com\",\n            \"name\": \"Palmer\",\n            \"year\": 2014,\n            \"make\": \"Honda\",\n            \"model\": \"Accord\",\n            \"score\": 112\n        },\n        {\n            \"car_id\": 176,\n            \"email\": \"gleggs3i@jiathis.com\",\n            \"name\": \"Germaine\",\n            \"year\": 2014,\n            \"make\": \"Mitsu\",\n            \"model\": \"Lancer\",\n            \"score\": 40\n        },\n        {\n            \"car_id\": 134,\n            \"email\": \"cjeandel2v@thetimes.co.uk\",\n            \"name\": \"Cooper\",\n            \"year\": 2013,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 52\n        },\n        {\n            \"car_id\": 16,\n            \"email\": \"kportec@statcounter.com\",\n            \"name\": \"Killy\",\n            \"year\": 2008,\n            \"make\": \"Nissan\",\n            \"model\": \"350z\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 104,\n            \"email\": \"tfero2a@wired.com\",\n            \"name\": \"Tanner\",\n            \"year\": 2014,\n            \"make\": \"Honda\",\n            \"model\": \"Civic si\",\n            \"score\": 48\n        },\n        {\n            \"car_id\": 88,\n            \"email\": \"knann1w@newyorker.com\",\n            \"name\": \"Karney\",\n            \"year\": 2008,\n            \"make\": \"Honda\",\n            \"model\": \"Accord\",\n            \"score\": 48\n        },\n        {\n            \"car_id\": 120,\n            \"email\": \"ebyram2m@digg.com\",\n            \"name\": \"Elwyn\",\n            \"year\": 2014,\n            \"make\": \"Ford\",\n            \"model\": \"Focus st\",\n            \"score\": 30\n        },\n        {\n            \"car_id\": 127,\n            \"email\": \"dmalyan2s@bloglines.com\",\n            \"name\": \"Donal\",\n            \"year\": 2013,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx\",\n            \"score\": 86\n        },\n        {\n            \"car_id\": 85,\n            \"email\": \"ssiemens1u@narod.ru\",\n            \"name\": \"Sholom\",\n            \"year\": 2017,\n            \"make\": \"Honda\",\n            \"model\": \"Accord\",\n            \"score\": 42\n        },\n        {\n            \"car_id\": \"Showcar\",\n            \"email\": \"trobjents4l@g.co\",\n            \"name\": \"Tally\",\n            \"year\": 2014,\n            \"make\": \"Nissan\",\n            \"model\": \"Gtr\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 108,\n            \"email\": \"amelato2c@google.cn\",\n            \"name\": \"Abdul\",\n            \"year\": 2013,\n            \"make\": \"Audi\",\n            \"model\": \"S4\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 98,\n            \"email\": \"eguild24@istockphoto.com\",\n            \"name\": \"Englebert\",\n            \"year\": 2012,\n            \"make\": \"Mercedes\",\n            \"model\": \"C63\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 130,\n            \"email\": \"dwatmough2u@oaic.gov.au\",\n            \"name\": \"Denys\",\n            \"year\": 2016,\n            \"make\": \"Honda\",\n            \"model\": \"Civic si\",\n            \"score\": 24\n        },\n        {\n            \"car_id\": 12,\n            \"email\": \"kbocken9@bing.com\",\n            \"name\": \"Klemens\",\n            \"year\": 1990,\n            \"make\": \"Nissan\",\n            \"model\": \"240\",\n            \"score\": 62\n        },\n        {\n            \"car_id\": 232,\n            \"email\": \"mblazewicz4c@w3.org\",\n            \"name\": \"Marmaduke\",\n            \"year\": 2018,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 46\n        },\n        {\n            \"car_id\": \"Vip\",\n            \"email\": \"salliker4m@nsw.gov.au\",\n            \"name\": \"Salomon\",\n            \"year\": 2008,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gli\",\n            \"score\": 16\n        },\n        {\n            \"car_id\": 96,\n            \"email\": \"wdigweed23@about.me\",\n            \"name\": \"Wynn\",\n            \"year\": 2017,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 65,\n            \"email\": \"telfe1e@tripod.com\",\n            \"name\": \"Trumaine\",\n            \"year\": 2009,\n            \"make\": \"Honda\",\n            \"model\": \"Fit\",\n            \"score\": 106\n        },\n        {\n            \"car_id\": 92,\n            \"email\": \"mjancy1z@privacy.gov.au\",\n            \"name\": \"Myles\",\n            \"year\": 2017,\n            \"make\": \"Hyundai\",\n            \"model\": \"Elantra sport\",\n            \"score\": 30\n        },\n        {\n            \"car_id\": 179,\n            \"email\": \"aspink3l@yolasite.com\",\n            \"name\": \"Ashlin\",\n            \"year\": 2004,\n            \"make\": \"Volkswagen\",\n            \"model\": \"R32\",\n            \"score\": 38\n        },\n        {\n            \"car_id\": 15,\n            \"email\": \"bspinnaceb@homestead.com\",\n            \"name\": \"Blane\",\n            \"year\": 2014,\n            \"make\": \"Audi\",\n            \"model\": \"S4\",\n            \"score\": 120\n        },\n        {\n            \"car_id\": 63,\n            \"email\": \"craleston1c@blogtalkradio.com\",\n            \"name\": \"Cris\",\n            \"year\": 2010,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 86\n        },\n        {\n            \"car_id\": 35,\n            \"email\": \"ggentricr@prweb.com\",\n            \"name\": \"Gerhardt\",\n            \"year\": 2016,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 60\n        },\n        {\n            \"car_id\": 99,\n            \"email\": \"cvaux25@facebook.com\",\n            \"name\": \"Clyde\",\n            \"year\": 2014,\n            \"make\": \"Honda\",\n            \"model\": \"Civic si\",\n            \"score\": 38\n        },\n        {\n            \"car_id\": 4341,\n            \"email\": \"rfrier4k@jalbum.net\",\n            \"name\": \"Ronald\",\n            \"year\": 1992,\n            \"make\": \"Nissan\",\n            \"model\": \"Rps13\",\n            \"score\": 32\n        },\n        {\n            \"car_id\": 156,\n            \"email\": \"jbrockton37@moonfruit.com\",\n            \"name\": \"Jamison\",\n            \"year\": 2014,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gli\",\n            \"score\": 56\n        },\n        {\n            \"car_id\": 220,\n            \"email\": \"vbloom46@businessinsider.com\",\n            \"name\": \"Vladimir\",\n            \"year\": 2004,\n            \"make\": \"Audi\",\n            \"model\": \"A4\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 44,\n            \"email\": \"eclaffey10@meetup.com\",\n            \"name\": \"Elisha\",\n            \"year\": 2018,\n            \"make\": \"Honda\",\n            \"model\": \"Civic si\",\n            \"score\": 40\n        },\n        {\n            \"car_id\": 19,\n            \"email\": \"jloveredgef@berkeley.edu\",\n            \"name\": \"Jae\",\n            \"year\": 2001,\n            \"make\": \"Mitsu\",\n            \"model\": \"Evo7\",\n            \"score\": 40\n        },\n        {\n            \"car_id\": 123,\n            \"email\": \"pvidgen2p@ca.gov\",\n            \"name\": \"Patrizius\",\n            \"year\": 2006,\n            \"make\": \"Lexus\",\n            \"model\": \"Sc430\",\n            \"score\": 66\n        },\n        {\n            \"car_id\": 57,\n            \"email\": \"amabey19@tumblr.com\",\n            \"name\": \"Arman\",\n            \"year\": 2015,\n            \"make\": \"Scion\",\n            \"model\": \"Frs\",\n            \"score\": 80\n        },\n        {\n            \"car_id\": 230,\n            \"email\": \"croscrigg4b@clickbank.net\",\n            \"name\": \"Cullen\",\n            \"year\": 2004,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx\",\n            \"score\": 20\n        },\n        {\n            \"car_id\": 33,\n            \"email\": \"gsemmensp@google.co.uk\",\n            \"name\": \"Gideon\",\n            \"year\": 2015,\n            \"make\": \"Subaru\",\n            \"model\": \"Sti\",\n            \"score\": 68\n        },\n        {\n            \"car_id\": 75,\n            \"email\": \"rmoyser1n@github.io\",\n            \"name\": \"Redford\",\n            \"year\": 2012,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 175,\n            \"email\": \"tmilhench3h@admin.ch\",\n            \"name\": \"Taber\",\n            \"year\": 2006,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 92\n        },\n        {\n            \"car_id\": 115,\n            \"email\": \"uwilkie2j@soup.io\",\n            \"name\": \"Udale\",\n            \"year\": 2001,\n            \"make\": \"Honda\",\n            \"model\": \"Crv\",\n            \"score\": 56\n        },\n        {\n            \"car_id\": 153,\n            \"email\": \"ntytcomb35@cmu.edu\",\n            \"name\": \"Nick\",\n            \"year\": 2017,\n            \"make\": \"Subaru\",\n            \"model\": \"Brz\",\n            \"score\": 42\n        },\n        {\n            \"car_id\": 76,\n            \"email\": \"rbuckthorp1o@wiley.com\",\n            \"name\": \"Roi\",\n            \"year\": 2005,\n            \"make\": \"Subaru\",\n            \"model\": \"Sti\",\n            \"score\": 12\n        },\n        {\n            \"car_id\": 56,\n            \"email\": \"hcollings18@sina.com.cn\",\n            \"name\": \"Haily\",\n            \"year\": 2009,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Jetta\",\n            \"score\": 42\n        },\n        {\n            \"car_id\": 50,\n            \"email\": \"hkamienski2i@howstuffworks.com\",\n            \"name\": \"Homerus\",\n            \"year\": 2015,\n            \"make\": \"Acura\",\n            \"model\": \"TLX\",\n            \"score\": 102\n        },\n        {\n            \"car_id\": 163,\n            \"email\": \"sdundin3c@engadget.com\",\n            \"name\": \"Shepherd\",\n            \"year\": 2013,\n            \"make\": \"Mitsu\",\n            \"model\": \"Ralliart\",\n            \"score\": 22\n        },\n        {\n            \"car_id\": 53,\n            \"email\": \"ptreuge17@over-blog.com\",\n            \"name\": \"Pembroke\",\n            \"year\": 2013,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 60\n        },\n        {\n            \"car_id\": 241,\n            \"email\": \"haronov4g@cyberchimps.com\",\n            \"name\": \"Hastings\",\n            \"year\": 2007,\n            \"make\": \"Toyota\",\n            \"model\": \"Camry\",\n            \"score\": 24\n        },\n        {\n            \"car_id\": 114,\n            \"email\": \"rfarrell2h@boston.com\",\n            \"name\": \"Roderick\",\n            \"year\": 2010,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 41,\n            \"email\": \"bmcconnalx@phoca.cz\",\n            \"name\": \"Barbabas\",\n            \"year\": 2012,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx\",\n            \"score\": 64\n        },\n        {\n            \"car_id\": 137,\n            \"email\": \"tchapellow2x@addtoany.com\",\n            \"name\": \"Tristam\",\n            \"year\": 2017,\n            \"make\": \"Ford\",\n            \"model\": \"Focus rs\",\n            \"score\": 54\n        },\n        {\n            \"car_id\": 116,\n            \"email\": \"owarrender2k@yahoo.com\",\n            \"name\": \"Obidiah\",\n            \"year\": 2008,\n            \"make\": \"Audi\",\n            \"model\": \"A4\",\n            \"score\": 28\n        },\n        {\n            \"car_id\": 212,\n            \"email\": \"dbummfrey42@miibeian.gov.cn\",\n            \"name\": \"Dav\",\n            \"year\": 2001,\n            \"make\": \"Lexus\",\n            \"model\": \"Is300\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 52,\n            \"email\": \"bdawltrey16@i2i.jp\",\n            \"name\": \"Ber\",\n            \"year\": 2007,\n            \"make\": \"Mazda\",\n            \"model\": \"Speed 3\",\n            \"score\": 48\n        },\n        {\n            \"car_id\": 226,\n            \"email\": \"kkliner49@xrea.com\",\n            \"name\": \"Koenraad\",\n            \"year\": 2008,\n            \"make\": \"Honda\",\n            \"model\": \"Accord\",\n            \"score\": 18\n        },\n        {\n            \"car_id\": 93,\n            \"email\": \"ckovnot20@tamu.edu\",\n            \"name\": \"Cesaro\",\n            \"year\": 2005,\n            \"make\": \"Acura\",\n            \"model\": \"TL\",\n            \"score\": 22\n        },\n        {\n            \"car_id\": 22,\n            \"email\": \"lgarstangi@angelfire.com\",\n            \"name\": \"Lowe\",\n            \"year\": 2007,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 24\n        },\n        {\n            \"car_id\": 70,\n            \"email\": \"pdeetlefs1j@youtu.be\",\n            \"name\": \"Paul\",\n            \"year\": 2014,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 0\n        },\n        {\n            \"car_id\": 128,\n            \"email\": \"mbariball2t@slate.com\",\n            \"name\": \"Martin\",\n            \"year\": 2010,\n            \"make\": \"Infiniti\",\n            \"model\": \"G37\",\n            \"score\": 128\n        },\n        {\n            \"car_id\": 40,\n            \"email\": \"aeaster3u@reuters.com\",\n            \"name\": \"Aksel\",\n            \"year\": 2007,\n            \"make\": \"Subaru\",\n            \"model\": \"Legacy\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 238,\n            \"email\": \"rklimkin4f@t-online.de\",\n            \"name\": \"Renaud\",\n            \"year\": 1982,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Rabbit\",\n            \"score\": 28\n        },\n        {\n            \"car_id\": 31,\n            \"email\": \"jaaronsono@ezinearticles.com\",\n            \"name\": \"Jereme\",\n            \"year\": 2007,\n            \"make\": \"Honda\",\n            \"model\": \"Fit\",\n            \"score\": 102\n        },\n        {\n            \"car_id\": 18,\n            \"email\": \"gbellwoode@chicagotribune.com\",\n            \"name\": \"Greg\",\n            \"year\": 2015,\n            \"make\": \"Audi\",\n            \"model\": \"S3\",\n            \"score\": 38\n        },\n        {\n            \"car_id\": 38,\n            \"email\": \"mvandermarkv@icq.com\",\n            \"name\": \"Mill\",\n            \"year\": 2017,\n            \"make\": \"Hyundai\",\n            \"model\": \"Elantra sport\",\n            \"score\": 62\n        },\n        {\n            \"car_id\": 46,\n            \"email\": \"egoley12@twitter.com\",\n            \"name\": \"Early\",\n            \"year\": 2008,\n            \"make\": \"Volkswagen\",\n            \"model\": \"R32\",\n            \"score\": 32\n        },\n        {\n            \"car_id\": 71,\n            \"email\": \"obennis1k@opensource.org\",\n            \"name\": \"Osborn\",\n            \"year\": 2008,\n            \"make\": \"Acura\",\n            \"model\": \"TL\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 49,\n            \"email\": \"tdrabble14@tripod.com\",\n            \"name\": \"Ted\",\n            \"year\": 1997,\n            \"make\": \"Acura\",\n            \"model\": \"Integra\",\n            \"score\": 42\n        },\n        {\n            \"car_id\": 28,\n            \"email\": \"imccream@51.la\",\n            \"name\": \"Iggie\",\n            \"year\": 1995,\n            \"make\": \"Bmw\",\n            \"model\": \"318xi\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 219,\n            \"email\": \"sgaddesby45@xing.com\",\n            \"name\": \"Spenser\",\n            \"year\": 2016,\n            \"make\": \"Ford\",\n            \"model\": \"Focus rs\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 185,\n            \"email\": \"tsandeman3r@wp.com\",\n            \"name\": \"Taddeusz\",\n            \"year\": 2013,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Jett\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 162,\n            \"email\": \"bpeaple3b@irs.gov\",\n            \"name\": \"Baudoin\",\n            \"year\": 2014,\n            \"make\": \"Nissan\",\n            \"model\": \"370z\",\n            \"score\": 36\n        },\n        {\n            \"car_id\": 180,\n            \"email\": \"jlewington3m@psu.edu\",\n            \"name\": \"Jeromy\",\n            \"year\": 2011,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 82\n        },\n        {\n            \"car_id\": 197,\n            \"email\": \"ewinship3y@tripod.com\",\n            \"name\": \"Enrico\",\n            \"year\": 2010,\n            \"make\": \"Audi\",\n            \"model\": \"A4\",\n            \"score\": 2\n        },\n        {\n            \"car_id\": 74,\n            \"email\": \"bholwell1m@hhs.gov\",\n            \"name\": \"Bartholomeo\",\n            \"year\": 2015,\n            \"make\": \"Honda\",\n            \"model\": \"Accord\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 150,\n            \"email\": \"brappaport34@purevolume.com\",\n            \"name\": \"Bar\",\n            \"year\": 2006,\n            \"make\": \"Nissan\",\n            \"model\": \"350z\",\n            \"score\": 22\n        },\n        {\n            \"car_id\": 103,\n            \"email\": \"benric29@cornell.edu\",\n            \"name\": \"Beaufort\",\n            \"year\": 2010,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx\",\n            \"score\": 72\n        },\n        {\n            \"car_id\": 141,\n            \"email\": \"dgude30@psu.edu\",\n            \"name\": \"Diego\",\n            \"year\": 1993,\n            \"make\": \"Mazda\",\n            \"model\": \"Miata\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 17,\n            \"email\": \"gdongated@ca.gov\",\n            \"name\": \"Gustavo\",\n            \"year\": 2016,\n            \"make\": \"Mercedes\",\n            \"model\": \"C43\",\n            \"score\": 34\n        },\n        {\n            \"car_id\": 187,\n            \"email\": \"gelham3t@illinois.edu\",\n            \"name\": \"Griffith\",\n            \"year\": 2007,\n            \"make\": \"Subaru\",\n            \"model\": \"Legacy\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 69,\n            \"email\": \"abroske1i@macromedia.com\",\n            \"name\": \"Amory\",\n            \"year\": 2018,\n            \"make\": \"Subaru\",\n            \"model\": \"WRX\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 100,\n            \"email\": \"eambrosoli26@noaa.gov\",\n            \"name\": \"Elwin\",\n            \"year\": 2006,\n            \"make\": \"Volvo\",\n            \"model\": \"S60r\",\n            \"score\": 22\n        },\n        {\n            \"car_id\": 112,\n            \"email\": \"wdymocke2f@artisteer.com\",\n            \"name\": \"Web\",\n            \"year\": 2008,\n            \"make\": \"Acura\",\n            \"model\": \"TL\",\n            \"score\": 110\n        },\n        {\n            \"car_id\": 172,\n            \"email\": \"abeeres3f@apache.org\",\n            \"name\": \"Aurthur\",\n            \"year\": 2014,\n            \"make\": \"Bmw\",\n            \"model\": \"4\",\n            \"score\": 22\n        },\n        {\n            \"car_id\": 91,\n            \"email\": \"cbragginton1y@house.gov\",\n            \"name\": \"Coop\",\n            \"year\": 2010,\n            \"make\": \"Mitsu\",\n            \"model\": \"Lancer\",\n            \"score\": 102\n        },\n        {\n            \"car_id\": 158,\n            \"email\": \"wgascard38@issuu.com\",\n            \"name\": \"Wally\",\n            \"year\": 2007,\n            \"make\": \"Nissan\",\n            \"model\": \"350z\",\n            \"score\": 64\n        },\n        {\n            \"car_id\": 182,\n            \"email\": \"djakoubec3o@aboutads.info\",\n            \"name\": \"Darcy\",\n            \"year\": 2012,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Cc\",\n            \"score\": 20\n        },\n        {\n            \"car_id\": 225,\n            \"email\": \"afeldharker48@whitehouse.gov\",\n            \"name\": \"Abbey\",\n            \"year\": 2016,\n            \"make\": \"Acura\",\n            \"model\": \"TLX\",\n            \"score\": 52\n        },\n        {\n            \"car_id\": 81,\n            \"email\": \"wdreher1r@bloomberg.com\",\n            \"name\": \"Ware\",\n            \"year\": 2016,\n            \"make\": \"Volkswagen\",\n            \"model\": \"GTI\",\n            \"score\": 24\n        },\n        {\n            \"car_id\": 78,\n            \"email\": \"nlidbetter1p@artisteer.com\",\n            \"name\": \"Nollie\",\n            \"year\": 2015,\n            \"make\": \"Mazda\",\n            \"model\": \"6\",\n            \"score\": 36\n        },\n        {\n            \"car_id\": 6,\n            \"email\": \"hferrer3@prlog.org\",\n            \"name\": \"Hamil\",\n            \"year\": 2016,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Golf r\",\n            \"score\": 54\n        },\n        {\n            \"car_id\": 121,\n            \"email\": \"hthacke2n@yellowbook.com\",\n            \"name\": \"Hunt\",\n            \"year\": 2012,\n            \"make\": \"Acura\",\n            \"model\": \"TL\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 211,\n            \"email\": \"ewinston41@ft.com\",\n            \"name\": \"Ellswerth\",\n            \"year\": 2004,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx\",\n            \"score\": 48\n        },\n        {\n            \"car_id\": 186,\n            \"email\": \"udunseath3s@jiathis.com\",\n            \"name\": \"Uriah\",\n            \"year\": 2012,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gli\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 4,\n            \"email\": \"ewrinch1b@cloudflare.com\",\n            \"name\": \"Evan\",\n            \"year\": 2007,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 72,\n            \"email\": \"kromaine1l@bandcamp.com\",\n            \"name\": \"Ken\",\n            \"year\": 2016,\n            \"make\": \"Honda\",\n            \"model\": \"Civic si\",\n            \"score\": 4\n        },\n        {\n            \"car_id\": 45,\n            \"email\": \"kduggon11@reddit.com\",\n            \"name\": \"Kylie\",\n            \"year\": 2006,\n            \"make\": \"Acura\",\n            \"model\": \"TL\",\n            \"score\": 42\n        },\n        {\n            \"car_id\": 1051,\n            \"email\": \"ecoultous4j@mayoclinic.com\",\n            \"name\": \"Eli\",\n            \"year\": 2006,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx\",\n            \"score\": 66\n        },\n        {\n            \"car_id\": 118,\n            \"email\": \"gcrichmere2l@vistaprint.com\",\n            \"name\": \"Ginger\",\n            \"year\": 1993,\n            \"make\": \"Honda\",\n            \"model\": \"Civic\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 174,\n            \"email\": \"tpinnijar3g@walmart.com\",\n            \"name\": \"Teodor\",\n            \"year\": 2006,\n            \"make\": \"Acura\",\n            \"model\": \"Rsx\",\n            \"score\": 4\n        },\n        {\n            \"car_id\": 84,\n            \"email\": \"okerwood1t@ebay.co.uk\",\n            \"name\": \"Orton\",\n            \"year\": 2012,\n            \"make\": \"Mercedes\",\n            \"model\": \"Cl63amg\",\n            \"score\": 70\n        },\n        {\n            \"car_id\": 242,\n            \"email\": \"ttoulmin4h@usda.gov\",\n            \"name\": \"Tris\",\n            \"year\": 2014,\n            \"make\": \"Nissan\",\n            \"model\": \"Maxima\",\n            \"score\": 26\n        },\n        {\n            \"car_id\": 193,\n            \"email\": \"nmarkey3x@taobao.com\",\n            \"name\": \"Napoleon\",\n            \"year\": 2014,\n            \"make\": \"Nissan\",\n            \"model\": \"Ssntra\",\n            \"score\": 14\n        },\n        {\n            \"car_id\": 3,\n            \"email\": \"bpengelly36@ca.gov\",\n            \"name\": \"Barbabas\",\n            \"year\": 2011,\n            \"make\": \"Nissan\",\n            \"model\": \"370\",\n            \"score\": 84\n        },\n        {\n            \"car_id\": 138,\n            \"email\": \"amitton2y@stanford.edu\",\n            \"name\": \"Andras\",\n            \"year\": 1990,\n            \"make\": \"Mazda\",\n            \"model\": \"Miata\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 94,\n            \"email\": \"easling21@sina.com.cn\",\n            \"name\": \"Estevan\",\n            \"year\": 2004,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 86,\n            \"email\": \"hdrennan1v@hatena.ne.jp\",\n            \"name\": \"Hebert\",\n            \"year\": 1996,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Jetta\",\n            \"score\": 8\n        },\n        {\n            \"car_id\": 11,\n            \"email\": \"kpeet8@fastcompany.com\",\n            \"name\": \"Korey\",\n            \"year\": 1991,\n            \"make\": \"Nissan\",\n            \"model\": \"Skyline\",\n            \"score\": 30\n        },\n        {\n            \"car_id\": 9,\n            \"email\": \"ppaffot6@mysql.com\",\n            \"name\": \"Pierson\",\n            \"year\": 1996,\n            \"make\": \"Nissan\",\n            \"model\": \"240\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 142,\n            \"email\": \"gficken31@jugem.jp\",\n            \"name\": \"Giorgio\",\n            \"year\": 1993,\n            \"make\": \"Toyota\",\n            \"model\": \"Supra\",\n            \"score\": 58\n        },\n        {\n            \"car_id\": 126,\n            \"email\": \"sdaglish2r@timesonline.co.uk\",\n            \"name\": \"Stern\",\n            \"year\": 2010,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Eos\",\n            \"score\": 92\n        },\n        {\n            \"car_id\": 144,\n            \"email\": \"dmattimoe32@techcrunch.com\",\n            \"name\": \"Davidde\",\n            \"year\": 2016,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Gti\",\n            \"score\": 28\n        },\n        {\n            \"car_id\": 110,\n            \"email\": \"ugozzard2d@spiegel.de\",\n            \"name\": \"Ugo\",\n            \"year\": 2011,\n            \"make\": \"Toyota\",\n            \"model\": \"Camry\",\n            \"score\": 58\n        },\n        {\n            \"car_id\": 34,\n            \"email\": \"skenewellq@chronoengine.com\",\n            \"name\": \"Sutherland\",\n            \"year\": 2010,\n            \"make\": \"Honda\",\n            \"model\": \"Fit\",\n            \"score\": 18\n        },\n        {\n            \"car_id\": 190,\n            \"email\": \"pjanse3w@mozilla.org\",\n            \"name\": \"Parker\",\n            \"year\": 1995,\n            \"make\": \"Lexus\",\n            \"model\": \"Sc300\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 235,\n            \"email\": \"hlanchbury4d@friendfeed.com\",\n            \"name\": \"Huntley\",\n            \"year\": 2013,\n            \"make\": \"Scion\",\n            \"model\": \"Frs\",\n            \"score\": 20\n        },\n        {\n            \"car_id\": 24,\n            \"email\": \"swyerk@creativecommons.org\",\n            \"name\": \"Sauveur\",\n            \"year\": 2013,\n            \"make\": \"Subaru\",\n            \"model\": \"BRZ\",\n            \"score\": 32\n        },\n        {\n            \"car_id\": 64,\n            \"email\": \"cspeechley1d@naver.com\",\n            \"name\": \"Carver\",\n            \"year\": 2004,\n            \"make\": \"Subaru\",\n            \"model\": \"Forester\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 122,\n            \"email\": \"tgoutcher2o@liveinternet.ru\",\n            \"name\": \"Terrence\",\n            \"year\": 2011,\n            \"make\": \"Infiniti\",\n            \"model\": \"M37s\",\n            \"score\": 44\n        },\n        {\n            \"car_id\": 106,\n            \"email\": \"imeeron2b@buzzfeed.com\",\n            \"name\": \"Ignazio\",\n            \"year\": 2007,\n            \"make\": \"Acura\",\n            \"model\": \"Tl type s\",\n            \"score\": 78\n        },\n        {\n            \"car_id\": 113,\n            \"email\": \"meilert2g@people.com.cn\",\n            \"name\": \"Marcel\",\n            \"year\": 2012,\n            \"make\": \"Acura\",\n            \"model\": \"Tsx sportwagon\",\n            \"score\": 116\n        },\n        {\n            \"car_id\": 13,\n            \"email\": \"rguitonneauu@goo.gl\",\n            \"name\": \"Robbert\",\n            \"year\": 2016,\n            \"make\": \"Honda\",\n            \"model\": \"Civic 1.5t\",\n            \"score\": 92\n        },\n        {\n            \"car_id\": 237,\n            \"email\": \"proles4e@lycos.com\",\n            \"name\": \"Padraic\",\n            \"year\": 1987,\n            \"make\": \"Volkswagen\",\n            \"model\": \"Jetta\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 222,\n            \"email\": \"eguest47@microsoft.com\",\n            \"name\": \"Edan\",\n            \"year\": 2015,\n            \"make\": \"Lexus\",\n            \"model\": \"Is250\",\n            \"score\": 40\n        },\n        {\n            \"car_id\": 79,\n            \"email\": \"rleheude1q@ted.com\",\n            \"name\": \"Rustin\",\n            \"year\": 1993,\n            \"make\": \"Mazda\",\n            \"model\": \"Miata\",\n            \"score\": 18\n        },\n        {\n            \"car_id\": 124,\n            \"email\": \"nlighterness2q@umn.edu\",\n            \"name\": \"Noel\",\n            \"year\": 2015,\n            \"make\": \"Jeep\",\n            \"model\": \"Wrangler\",\n            \"score\": 124\n        },\n        {\n            \"car_id\": 996,\n            \"email\": \"carguy99@gmail.com\",\n            \"name\": \"Stevie\",\n            \"year\": 2021,\n            \"make\": \"Audi\",\n            \"model\": \"RS6\",\n            \"score\": 42\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Car by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "cisc3140lab4.herokuapp.com/api/cars/48",
+					"host": [
+						"cisc3140lab4",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"cars",
+						"48"
+					]
+				},
+				"description": "API endpoint to get *Car by ID* in the system database.\n> A successful request will result in a *HTTP 200* Status code."
+			},
+			"response": [
+				{
+					"name": "Car by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cisc3140lab4.herokuapp.com/api/cars/48",
+							"host": [
+								"cisc3140lab4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"48"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Dns-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-Ct",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "226"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"e2-/f1xu9jiRZSpAHGgpAlxJ0ADOIU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 May 2022 20:25:10 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"car_id\": 48,\n            \"email\": \"honoland13@japanpost.jp\",\n            \"name\": \"Hernando\",\n            \"year\": 2015,\n            \"make\": \"Acura\",\n            \"model\": \"TLX\",\n            \"score\": 62\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Cars by Make",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "cisc3140lab4.herokuapp.com/api/cars/make/Lexus",
+					"host": [
+						"cisc3140lab4",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"cars",
+						"make",
+						"Lexus"
+					]
+				},
+				"description": "API endpoint to get a *Car by Make* in the system database.\n> A successful request will result in a *HTTP 200* Status code."
+			},
+			"response": [
+				{
+					"name": "Cars by Make",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "cisc3140lab4.herokuapp.com/api/cars/make/Lexus",
+							"host": [
+								"cisc3140lab4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cars",
+								"make",
+								"Lexus"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-Dns-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-Ct",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "772"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"304-6DZelnk5VMqRPg0Bgep7KFOXPCU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 03 May 2022 20:23:41 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"car_id\": 123,\n            \"email\": \"pvidgen2p@ca.gov\",\n            \"name\": \"Patrizius\",\n            \"year\": 2006,\n            \"make\": \"Lexus\",\n            \"model\": \"Sc430\",\n            \"score\": 66\n        },\n        {\n            \"car_id\": 212,\n            \"email\": \"dbummfrey42@miibeian.gov.cn\",\n            \"name\": \"Dav\",\n            \"year\": 2001,\n            \"make\": \"Lexus\",\n            \"model\": \"Is300\",\n            \"score\": 6\n        },\n        {\n            \"car_id\": 190,\n            \"email\": \"pjanse3w@mozilla.org\",\n            \"name\": \"Parker\",\n            \"year\": 1995,\n            \"make\": \"Lexus\",\n            \"model\": \"Sc300\",\n            \"score\": 10\n        },\n        {\n            \"car_id\": 222,\n            \"email\": \"eguest47@microsoft.com\",\n            \"name\": \"Edan\",\n            \"year\": 2015,\n            \"make\": \"Lexus\",\n            \"model\": \"Is250\",\n            \"score\": 40\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create New Car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"car_id\": 996,\r\n    \"email\": \"steve2k@email.com\",\r\n    \"name\": \"Stevie\",\r\n    \"year\": 2021,\r\n    \"make\": \"Audi\",\r\n    \"model\": \"RS6\",\r\n    \"racer_turbo\": 0,\r\n    \"racer_supercharged\": 2,\r\n    \"racer_performance\": 0, \r\n    \"racer_horsepower\": 4, \r\n    \"car_overall\": 6, \r\n    \"engine_modifications\": 3, \r\n    \"engine_performance\": 1, \r\n    \"engine_chrome\": 0, \r\n    \"engine_detailing\": 4, \r\n    \"engine_cleanliness\": 6, \r\n    \"body_frame_undercarriage\": 2, \r\n    \"body_frame_suspension\": 0,\r\n    \"body_frame_chrome\": 0,\r\n    \"body_frame_detailing\": 1,\r\n    \"body_frame_cleanliness\": 2,\r\n    \"mods_paint\": 0,\r\n    \"mods_body\": 0,\r\n    \"mods_wrap\": 3,\r\n    \"mods_rims\": 1,\r\n    \"mods_interior\": 1,\r\n    \"mods_other\": 0,\r\n    \"mods_ice\": 0,\r\n    \"mods_aftermarket\": 1,\r\n    \"mods_wip\": 1,\r\n    \"mods_overall\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/cars?{=&\"car_id\"= 996,&\"email\"= \"steve2k@email.com\",&\"name\"= \"Stevie\",&\"year\"= 2021,&\"make\"= \"Audi\",&\"model\"= \"RS6\",&\"racer_turbo\"= 0,&\"racer_supercharged\"= 2,&\"racer_performance\"= 0, &\"racer_horsepower\"= 4, &\"car_overall\"= 6, &\"engine_modifications\"= 3, &\"engine_performance\"= 1, &\"engine_chrome\"= 0, &\"engine_detailing\"= 4, &\"engine_cleanliness\"= 6, &\"body_frame_undercarriage\"= 2, &\"body_frame_suspension\"= 0,&\"body_frame_chrome\"= 0,&\"body_frame_detailing\"= 1,&\"body_frame_cleanliness\"= 2,&\"mods_paint\"= 0,&\"mods_body\"= 0,&\"mods_wrap\"= 3,&\"mods_rims\"= 1,&\"mods_interior\"= 1,&\"mods_other\"= 0,&\"mods_ice\"= 0,&\"mods_aftermarket\"= 1,&\"mods_wip\"= 1,&\"mods_overall\"= 4&}]=",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars"
+					],
+					"query": [
+						{
+							"key": "{",
+							"value": ""
+						},
+						{
+							"key": "\"car_id\"",
+							"value": " 996,"
+						},
+						{
+							"key": "\"email\"",
+							"value": " \"steve2k@email.com\","
+						},
+						{
+							"key": "\"name\"",
+							"value": " \"Stevie\","
+						},
+						{
+							"key": "\"year\"",
+							"value": " 2021,"
+						},
+						{
+							"key": "\"make\"",
+							"value": " \"Audi\","
+						},
+						{
+							"key": "\"model\"",
+							"value": " \"RS6\","
+						},
+						{
+							"key": "\"racer_turbo\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"racer_supercharged\"",
+							"value": " 2,"
+						},
+						{
+							"key": "\"racer_performance\"",
+							"value": " 0, "
+						},
+						{
+							"key": "\"racer_horsepower\"",
+							"value": " 4, "
+						},
+						{
+							"key": "\"car_overall\"",
+							"value": " 6, "
+						},
+						{
+							"key": "\"engine_modifications\"",
+							"value": " 3, "
+						},
+						{
+							"key": "\"engine_performance\"",
+							"value": " 1, "
+						},
+						{
+							"key": "\"engine_chrome\"",
+							"value": " 0, "
+						},
+						{
+							"key": "\"engine_detailing\"",
+							"value": " 4, "
+						},
+						{
+							"key": "\"engine_cleanliness\"",
+							"value": " 6, "
+						},
+						{
+							"key": "\"body_frame_undercarriage\"",
+							"value": " 2, "
+						},
+						{
+							"key": "\"body_frame_suspension\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"body_frame_chrome\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"body_frame_detailing\"",
+							"value": " 1,"
+						},
+						{
+							"key": "\"body_frame_cleanliness\"",
+							"value": " 2,"
+						},
+						{
+							"key": "\"mods_paint\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"mods_body\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"mods_wrap\"",
+							"value": " 3,"
+						},
+						{
+							"key": "\"mods_rims\"",
+							"value": " 1,"
+						},
+						{
+							"key": "\"mods_interior\"",
+							"value": " 1,"
+						},
+						{
+							"key": "\"mods_other\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"mods_ice\"",
+							"value": " 0,"
+						},
+						{
+							"key": "\"mods_aftermarket\"",
+							"value": " 1,"
+						},
+						{
+							"key": "\"mods_wip\"",
+							"value": " 1,"
+						},
+						{
+							"key": "\"mods_overall\"",
+							"value": " 4"
+						},
+						{
+							"key": "}]",
+							"value": ""
+						}
+					]
+				},
+				"description": "API endpoint to create a new *Car* in the system database.\n> A successful request will result in a *HTTP 200* Status code.\n\nAn entry successfully created will be visible on `</api/cars>`.\n\nIf the created entry has an email or ID that's already in the system database it will not be created.\n> An unsuccessful request will result in a *HTTP 400* Status code."
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"car_id\": 996,\r\n    \"email\": \"steve2k@email.com\",\r\n    \"name\": \"Stevie\",\r\n    \"year\": 2021,\r\n    \"make\": \"Audi\",\r\n    \"model\": \"RS6\",\r\n    \"racer_turbo\": 0,\r\n    \"racer_supercharged\": 2,\r\n    \"racer_performance\": 0, \r\n    \"racer_horsepower\": 4, \r\n    \"car_overall\": 6, \r\n    \"engine_modifications\": 3, \r\n    \"engine_performance\": 1, \r\n    \"engine_chrome\": 0, \r\n    \"engine_detailing\": 4, \r\n    \"engine_cleanliness\": 6, \r\n    \"body_frame_undercarriage\": 2, \r\n    \"body_frame_suspension\": 0,\r\n    \"body_frame_chrome\": 0,\r\n    \"body_frame_detailing\": 1,\r\n    \"body_frame_cleanliness\": 2,\r\n    \"mods_paint\": 0,\r\n    \"mods_body\": 0,\r\n    \"mods_wrap\": 3,\r\n    \"mods_rims\": 1,\r\n    \"mods_interior\": 1,\r\n    \"mods_other\": 0,\r\n    \"mods_ice\": 0,\r\n    \"mods_aftermarket\": 1,\r\n    \"mods_wip\": 1,\r\n    \"mods_overall\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/cars?{=&\"car_id\"= 996,&\"email\"= \"steve2k@email.com\",&\"name\"= \"Stevie\",&\"year\"= 2021,&\"make\"= \"Audi\",&\"model\"= \"RS6\",&\"racer_turbo\"= 0,&\"racer_supercharged\"= 2,&\"racer_performance\"= 0, &\"racer_horsepower\"= 4, &\"car_overall\"= 6, &\"engine_modifications\"= 3, &\"engine_performance\"= 1, &\"engine_chrome\"= 0, &\"engine_detailing\"= 4, &\"engine_cleanliness\"= 6, &\"body_frame_undercarriage\"= 2, &\"body_frame_suspension\"= 0,&\"body_frame_chrome\"= 0,&\"body_frame_detailing\"= 1,&\"body_frame_cleanliness\"= 2,&\"mods_paint\"= 0,&\"mods_body\"= 0,&\"mods_wrap\"= 3,&\"mods_rims\"= 1,&\"mods_interior\"= 1,&\"mods_other\"= 0,&\"mods_ice\"= 0,&\"mods_aftermarket\"= 1,&\"mods_wip\"= 1,&\"mods_overall\"= 4&}]=",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars"
+							],
+							"query": [
+								{
+									"key": "{",
+									"value": ""
+								},
+								{
+									"key": "\"car_id\"",
+									"value": " 996,"
+								},
+								{
+									"key": "\"email\"",
+									"value": " \"steve2k@email.com\","
+								},
+								{
+									"key": "\"name\"",
+									"value": " \"Stevie\","
+								},
+								{
+									"key": "\"year\"",
+									"value": " 2021,"
+								},
+								{
+									"key": "\"make\"",
+									"value": " \"Audi\","
+								},
+								{
+									"key": "\"model\"",
+									"value": " \"RS6\","
+								},
+								{
+									"key": "\"racer_turbo\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"racer_supercharged\"",
+									"value": " 2,"
+								},
+								{
+									"key": "\"racer_performance\"",
+									"value": " 0, "
+								},
+								{
+									"key": "\"racer_horsepower\"",
+									"value": " 4, "
+								},
+								{
+									"key": "\"car_overall\"",
+									"value": " 6, "
+								},
+								{
+									"key": "\"engine_modifications\"",
+									"value": " 3, "
+								},
+								{
+									"key": "\"engine_performance\"",
+									"value": " 1, "
+								},
+								{
+									"key": "\"engine_chrome\"",
+									"value": " 0, "
+								},
+								{
+									"key": "\"engine_detailing\"",
+									"value": " 4, "
+								},
+								{
+									"key": "\"engine_cleanliness\"",
+									"value": " 6, "
+								},
+								{
+									"key": "\"body_frame_undercarriage\"",
+									"value": " 2, "
+								},
+								{
+									"key": "\"body_frame_suspension\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"body_frame_chrome\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"body_frame_detailing\"",
+									"value": " 1,"
+								},
+								{
+									"key": "\"body_frame_cleanliness\"",
+									"value": " 2,"
+								},
+								{
+									"key": "\"mods_paint\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"mods_body\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"mods_wrap\"",
+									"value": " 3,"
+								},
+								{
+									"key": "\"mods_rims\"",
+									"value": " 1,"
+								},
+								{
+									"key": "\"mods_interior\"",
+									"value": " 1,"
+								},
+								{
+									"key": "\"mods_other\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"mods_ice\"",
+									"value": " 0,"
+								},
+								{
+									"key": "\"mods_aftermarket\"",
+									"value": " 1,"
+								},
+								{
+									"key": "\"mods_wip\"",
+									"value": " 1,"
+								},
+								{
+									"key": "\"mods_overall\"",
+									"value": " 4"
+								},
+								{
+									"key": "}]",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "816"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"330-4JwvkuFTxMLlM+vYZcT5K0jqsaw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 May 2022 01:25:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"car_id\": 996,\n        \"email\": \"steve2k@email.com\",\n        \"name\": \"Stevie\",\n        \"year\": 2021,\n        \"make\": \"Audi\",\n        \"model\": \"RS6\",\n        \"racer_turbo\": 0,\n        \"racer_supercharged\": 2,\n        \"racer_performance\": 0,\n        \"racer_horsepower\": 4,\n        \"car_overall\": 6,\n        \"engine_modifications\": 3,\n        \"engine_performance\": 1,\n        \"engine_chrome\": 0,\n        \"engine_detailing\": 4,\n        \"engine_cleanliness\": 6,\n        \"body_frame_undercarriage\": 2,\n        \"body_frame_suspension\": 0,\n        \"body_frame_chrome\": 0,\n        \"body_frame_detailing\": 1,\n        \"body_frame_cleanliness\": 2,\n        \"mods_paint\": 0,\n        \"mods_body\": 0,\n        \"mods_wrap\": 3,\n        \"mods_rims\": 1,\n        \"mods_interior\": 1,\n        \"mods_other\": 0,\n        \"mods_ice\": 0,\n        \"mods_aftermarket\": 1,\n        \"mods_wip\": 1,\n        \"mods_overall\": 4\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Car Entry",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marco\",\r\n    \"year\": 2022,\r\n    \"make\": \"Mercedes\",\r\n    \"model\": \"E63 AMG\",\r\n    \"engine_chrome\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/cars/996",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cars",
+						"996"
+					]
+				},
+				"description": "API endpoint to update information on an existing *Car* in the system database.\n> A successful request will result in a *HTTP 200* Status code.\n\nAn entry successfully updated will be visible on `</api/cars>`.\n\nUsers can edit all possible keys for each entry in the database, including the keys responsible for housing car judged by categories, such as `\"racer_turbo\"` or `\"mods_overall\"`, etc. In the example below, we updated the `\"engine_chrome\"` key with a value of 3."
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marco\",\r\n    \"year\": 2022,\r\n    \"make\": \"Mercedes\",\r\n    \"model\": \"E63 AMG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/cars/996",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"cars",
+								"996"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Embedder-Policy",
+							"value": "require-corp"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "181"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b5-s0czShJeBeu4SIcBZWCpIhcFfws\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 May 2022 01:48:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"data\": {\n        \"car_id\": \"996\",\n        \"updates\": {\n            \"name\": \"Marco\",\n            \"year\": 2022,\n            \"make\": \"Mercedes\",\n            \"model\": \"E63 AMG\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
